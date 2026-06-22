@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resume Analysis Report</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f4f4;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 600px;
+            margin: auto;
+        }
+
+        .score-box {
+            padding: 10px;
+            margin: 10px 0;
+            background: #e8f0fe;
+            border-radius: 5px;
+        }
+
+        .total {
+            font-size: 24px;
+            font-weight: bold;
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Resume Analysis Report</h1>
+
+    <h3>{{ filename }}</h3>
+
+    <div class="score-box">Action Verbs: {{ action_verbs }}/25</div>
+    <div class="score-box">Quantification: {{ quantification }}/25</div>
+    <div class="score-box">Sections: {{ sections }}/20</div>
+    <div class="score-box">Weak Phrases: {{ weak_phrases }}/15</div>
+    <div class="score-box">Bullet Quality: {{ bullet_quality }}/15</div>
+
+    <hr>
+
+    <div class="total">
+        TOTAL SCORE: {{ total }}/100
+    </div>
+
+</div>
+
+</body>
+</html>
